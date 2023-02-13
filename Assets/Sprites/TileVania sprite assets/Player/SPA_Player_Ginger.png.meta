@@ -411,7 +411,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SPA_Player_Ginger_14
+      name: Climbing1
       rect:
         serializedVersion: 2
         x: 0
@@ -432,7 +432,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SPA_Player_Ginger_15
+      name: Climbing2
       rect:
         serializedVersion: 2
         x: 38
@@ -737,12 +737,11 @@ TextureImporter:
     secondaryTextures: []
     nameFileIdTable:
       SPA_Player_Ginger_3: -285667052
-      SPA_Player_Ginger_15: -759035824
+      Climbing2: -759035824
       SPA_Player_Ginger_1: 2028328126
       Run7: -115237855
       SPA_Player_Ginger_2: 1250809398
       SPA_Player_Ginger_0: -1111380195
-      SPA_Player_Ginger_14: -1953676269
       SPA_Player_Ginger_17: 1846748941
       SPA_Player_Ginger_16: 1672918970
       Run1: 1559167315
@@ -759,6 +758,7 @@ TextureImporter:
       SPA_Player_Ginger_13: -62634090
       Idle1: 584899742
       Idle4: -2127955146
+      Climbing1: -1953676269
       Run4: -850832368
       Run9: -675637931
       SPA_Player_Ginger_11: -1038387222
