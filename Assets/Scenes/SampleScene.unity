@@ -1424,7 +1424,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f866a728a54fc24aad2b02d5080e6b2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  collider2D: {fileID: 0}
 --- !u!1 &1483691379
 GameObject:
   m_ObjectHideFlags: 0
@@ -3692,18 +3691,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 3149144582830335910, guid: 7e184d5882f4aa74bae7d3176137534d, type: 3}
-      propertyPath: runSpeed
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 3149144582830335910, guid: 7e184d5882f4aa74bae7d3176137534d, type: 3}
-      propertyPath: jumpSpeed
-      value: 25
-      objectReference: {fileID: 0}
-    - target: {fileID: 6118813932896202181, guid: 7e184d5882f4aa74bae7d3176137534d, type: 3}
-      propertyPath: m_GravityScale
-      value: 8
-      objectReference: {fileID: 0}
     - target: {fileID: 8440049447741222730, guid: 7e184d5882f4aa74bae7d3176137534d, type: 3}
       propertyPath: m_Name
       value: Ginger (Player)
