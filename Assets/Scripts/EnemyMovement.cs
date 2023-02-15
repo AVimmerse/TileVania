@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -12,10 +13,19 @@ public class EnemyMovement : MonoBehaviour
         myRigidBody = GetComponent<Rigidbody2D>();
     }
 
-
-
     void Update()
     {
         myRigidBody.velocity = new Vector2(moveSpeed, 0);
+    }
+
+    void OnTriggerExit2D(Collider2D other)
+    {
+        moveSpeed = -moveSpeed;
+        FlipEnemyFacing();
+    }
+
+    private void FlipEnemyFacing()
+    {
+        
     }
 }
