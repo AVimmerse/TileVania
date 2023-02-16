@@ -15,6 +15,8 @@ public class PlayerMovement : MonoBehaviour
     private CapsuleCollider2D myBodyCollider;
     private BoxCollider2D myFeetCollider;
     private float gravityScaleAtStart;
+    [SerializeField] GameObject skull;
+    //[SerializeField] GameObject test;
     
     bool isAlive = true;
 
@@ -38,7 +40,7 @@ public class PlayerMovement : MonoBehaviour
 
     void OnMove(InputValue value)
     {
-        if (!isAlive) { return; }
+        //if (!isAlive) { return; }
         moveInput = value.Get<Vector2>();
         Debug.Log(moveInput);
     }
@@ -94,9 +96,14 @@ public class PlayerMovement : MonoBehaviour
 
     void Die()
     {
-        if (!myBodyCollider.IsTouchingLayers(LayerMask.GetMask("Enemies")))
+        if (myBodyCollider.IsTouchingLayers(LayerMask.GetMask("Enemies")))
         {
             isAlive = false;
+            myAnimator.SetTrigger("Dying");
+            skull.SetActive(true);
+            //--test = GetComponent<Renderer>();
+            //test.material.SetColor("_Color", Color.red);
+            
         }
     }
 }

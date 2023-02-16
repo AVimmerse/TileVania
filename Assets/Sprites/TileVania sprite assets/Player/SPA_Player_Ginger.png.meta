@@ -348,7 +348,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SPA_Player_Ginger_11
+      name: Dying
       rect:
         serializedVersion: 2
         x: 76
@@ -739,6 +739,7 @@ TextureImporter:
       SPA_Player_Ginger_3: -285667052
       Climbing2: -759035824
       SPA_Player_Ginger_1: 2028328126
+      Dying: -1038387222
       Run7: -115237855
       SPA_Player_Ginger_2: 1250809398
       SPA_Player_Ginger_0: -1111380195
@@ -761,7 +762,6 @@ TextureImporter:
       Climbing1: -1953676269
       Run4: -850832368
       Run9: -675637931
-      SPA_Player_Ginger_11: -1038387222
       Idle2: -1588131350
       Run10: 1519017896
       Run8: -1477250372
