@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using Cinemachine;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -16,7 +17,9 @@ public class PlayerMovement : MonoBehaviour
     private BoxCollider2D myFeetCollider;
     private float gravityScaleAtStart;
     [SerializeField] GameObject skull;
+    private AudioSource myAudioSource;
     //[SerializeField] GameObject test;
+    private CinemachineImpulseSource myImpulseSource;
     
     bool isAlive = true;
 
@@ -27,6 +30,8 @@ public class PlayerMovement : MonoBehaviour
         myBodyCollider = GetComponent<CapsuleCollider2D>();
         gravityScaleAtStart = myRigidbody.gravityScale;
         myFeetCollider = GetComponent<BoxCollider2D>();
+        myAudioSource = GetComponent<AudioSource>();
+        myImpulseSource = GetComponent<CinemachineImpulseSource>();
     }
 
     void Update()
@@ -103,7 +108,8 @@ public class PlayerMovement : MonoBehaviour
             skull.SetActive(true);
             //--test = GetComponent<Renderer>();
             //test.material.SetColor("_Color", Color.red);
-            
+            myAudioSource.Play();
+            myImpulseSource.GenerateImpulse(1);
         }
     }
 }
