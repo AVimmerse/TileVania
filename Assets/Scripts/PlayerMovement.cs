@@ -14,6 +14,9 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private Animator myAnimator;
     [SerializeField] private float jumpSpeed = 5f;
     [SerializeField] private float climbSpeed = 5f;
+    [SerializeField] private GameObject bullet;
+    [SerializeField] private Transform gun;
+
     private CapsuleCollider2D myBodyCollider;
     private BoxCollider2D myFeetCollider;
     private float gravityScaleAtStart;
@@ -45,9 +48,15 @@ public class PlayerMovement : MonoBehaviour
         Die();
     }
 
+    private void OnFire(InputValue value) 
+    {
+        if (!isAlive) { return; }
+        Instantiate(bullet, gun.position, transform.rotation);
+    }
+
     void OnMove(InputValue value)
     {
-        //if (!isAlive) { return; }
+        if (!isAlive) { return; }
         moveInput = value.Get<Vector2>();
         Debug.Log(moveInput);
     }
