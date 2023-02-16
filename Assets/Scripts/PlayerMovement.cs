@@ -1,3 +1,4 @@
+//using System.Numerics;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -20,6 +21,7 @@ public class PlayerMovement : MonoBehaviour
     private AudioSource myAudioSource;
     //[SerializeField] GameObject test;
     private CinemachineImpulseSource myImpulseSource;
+    [SerializeField] private Vector2 deathKick = new Vector2(10f, 10f);
     
     bool isAlive = true;
 
@@ -101,7 +103,7 @@ public class PlayerMovement : MonoBehaviour
 
     void Die()
     {
-        if (myBodyCollider.IsTouchingLayers(LayerMask.GetMask("Enemies")))
+        if (myBodyCollider.IsTouchingLayers(LayerMask.GetMask("Enemies", "Hazards")))
         {
             isAlive = false;
             myAnimator.SetTrigger("Dying");
@@ -110,6 +112,7 @@ public class PlayerMovement : MonoBehaviour
             //test.material.SetColor("_Color", Color.red);
             myAudioSource.Play();
             myImpulseSource.GenerateImpulse(1);
+            myRigidbody.velocity = deathKick;
         }
     }
 }
