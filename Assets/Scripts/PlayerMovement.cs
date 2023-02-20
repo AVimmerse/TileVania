@@ -122,6 +122,7 @@ public class PlayerMovement : MonoBehaviour
             myAudioSource.Play();
             myImpulseSource.GenerateImpulse(1);
             myRigidbody.velocity = deathKick;
+            FindObjectOfType<GameSession>().ProcessPlayerDeath();
         }
     }
 }
